@@ -31,15 +31,6 @@ Keysmith 系列为本地 AI 工具**安全部署、验证和撤销**自定义指
 > [!WARNING]
 > **项目 / local scope** 只影响该仓库；**user scope** 会影响加载 `~/.claude/CLAUDE.md` 的新会话。`--runtime` 还会对齐 `settings.json` 的 `systemPrompt`，并安装 managed shell wrapper。默认只预览，显式 `--yes` 才写入。先阅读 [`examples/claude-project-rules.md`](examples/claude-project-rules.md)、[`examples/claude-append-prompt.md`](examples/claude-append-prompt.md) 和 [`docs/privacy-security.md`](docs/privacy-security.md)。
 
-### 选择哪个 Keysmith
-
-| 项目 | 目标工具 | 部署面 | 稳妥安装 | Desktop |
-| --- | --- | --- | --- | --- |
-| [codex-keysmith](https://github.com/Jia-Ethan/codex-keysmith) | Codex | 全局 `~/.codex` 指令 | 稳定 CLI Release | 未签名 Beta |
-| **[claude-keysmith](https://github.com/Jia-Ethan/claude-keysmith)** | Claude Code | 项目 / 用户 `CLAUDE.md` import | 稳定 v7.1 源码 tag | 未签名 Beta |
-| [grok-keysmith](https://github.com/Jia-Ethan/grok-keysmith) | Grok Build | 全局 `~/.grok/rules`（不改 `AGENTS.md`） | 稳定 CLI Release | 未签名 Beta |
-| [zcode-keysmith](https://github.com/Jia-Ethan/zcode-keysmith) | ZCode App | 用户目录 system-role + wrapper | 仅源码 | 无 |
-
 ### 安装方式
 
 1. **稳妥：稳定 v7.1 源码 CLI。** 没有独立 CLI 安装包；按下方命令固定 clone `v7.1` tag，再运行 `claude-instruct.py`。不要 `curl | python`。
